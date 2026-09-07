@@ -1,0 +1,36 @@
+{
+    "name": "elsan/laravel-jwt",
+    "description": "Cookie-based JWT guard for Laravel, built on php-open-source-saver/jwt-auth, with per-user token revision support.",
+    "type": "library",
+    "license": "proprietary",
+    "require": {
+        "php": "^8.3",
+        "illuminate/auth": "^12.0",
+        "illuminate/contracts": "^12.0",
+        "illuminate/support": "^12.0",
+        "php-open-source-saver/jwt-auth": "^2.3"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^10.0",
+        "phpunit/phpunit": "^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Elsan\\JwtCookieGuard\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Elsan\\JwtCookieGuard\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Elsan\\JwtCookieGuard\\JwtCookieGuardServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
